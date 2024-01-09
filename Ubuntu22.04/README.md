@@ -6,7 +6,7 @@ this is by far the easiest option to use since no containers are required. Howev
 
 ## How to use:
 
-First, Install [rocker](https://github.com/osrf/rocker) using pip:
+Run the script as sudo to install everything:
 ```bash
 sudo ./install.sh
 ```
