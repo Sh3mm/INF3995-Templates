@@ -19,8 +19,8 @@ It will prompt you for a password, and after you will be able to connect to the 
 
 
 ## Linking folders:
-to link a folder from your file manager to the container's you will need to add a volume argument to the creation command as follow:
+to link a folder from your file manager to the container's you will need to add a volume argument (`-v path/to/foler:where/it/goes/in/container`) to the creation command as follow:
 
 ```bash
-docker run --rm -p 5901:5901 -v path/to/foler:where/it/goes/in/container -it inf3995-equipe0-simulation bash -c "TVNC_WM=mate /opt/TurboVNC/bin/vncserver; /bin/bash"
+docker run --rm -p 5901:5901 -v path/to/foler:where/it/goes/in/container -it rosign bash -c "TVNC_WM=mate /opt/TurboVNC/bin/vncserver; /bin/bash" 
 ```
