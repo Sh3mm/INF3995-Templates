@@ -12,27 +12,23 @@ docker build -t rosign .
 ```
 
 Then, create the docker container:
-```
+```bash
 docker create --name="teamX-ros-ign" -p 5901:5901 -it rosign /bin/bash
 ```
 
 Once this is done you can use the following command to start the docker container:
-```
+```bash
 docker start --attach -i teamX-ros-ign
 ```
 
-this will prompt you to add a password. Once you do so, you'll be able to use any vnc client to connect to `localhost:5901` to interact with your GUI.
-
-once you are done with your dev session and want to close the server, simply run:
+After getting in the container, run the following command to start the server:
+```bash
+docker run --rm -p 5901:5901 -it inf3995-equipe0-simulation bash -c "TVNC_WM=mate /opt/TurboVNC/bin/vncserver; /bin/bash" 
 ```
-docker stop teamX-ros-ign
-```
-
-starting and stopping the same docker container will allow you to keep whatever changes/installations you made to the container witout constantly having to recompile the Dockerfile.
 
 ## Linking folders:
 to link a folder from your file manager to the container's you will need to add a volume argument to the creation command as follow:
 
-```
-docker create --name="teamX-ros-ign" -v path/to/foler:where/it/goes/in/container -p 5901:5901 -it rosign /bin/bash
+```bash
+docker run --rm -p 5901:5901 -v path/to/foler:where/it/goes/in/container -it inf3995-equipe0-simulation bash -c "TVNC_WM=mate /opt/TurboVNC/bin/vncserver; /bin/bash"
 ```

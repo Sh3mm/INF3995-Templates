@@ -35,4 +35,3 @@ RUN echo "deb [signed-by=/etc/apt/trusted.gpg.d/TurboVNC.gpg] https://packageclo
 RUN apt update; apt install turbovnc -y
 RUN apt install ubuntu-mate-desktop -y
 
-RUN echo "TVNC_WM=mate /opt/TurboVNC/bin/vncserver" >> /root/.bashrc
