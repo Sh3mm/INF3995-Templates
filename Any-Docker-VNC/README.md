@@ -11,20 +11,12 @@ First, build the Dockerfile into a usable image:
 docker build -t rosign .
 ```
 
-Then, create the docker container:
+After Creating the Image, run the following command to start a containner:
 ```bash
-docker create --name="teamX-ros-ign" -p 5901:5901 -it rosign /bin/bash
+docker run --rm -p 5901:5901 -it rosign bash -c "TVNC_WM=mate /opt/TurboVNC/bin/vncserver; /bin/bash" 
 ```
+It will prompt you for a password, and after you will be able to connect to the vnc server with any VNC client at `localhost:5901`
 
-Once this is done you can use the following command to start the docker container:
-```bash
-docker start --attach -i teamX-ros-ign
-```
-
-After getting in the container, run the following command to start the server:
-```bash
-docker run --rm -p 5901:5901 -it inf3995-equipe0-simulation bash -c "TVNC_WM=mate /opt/TurboVNC/bin/vncserver; /bin/bash" 
-```
 
 ## Linking folders:
 to link a folder from your file manager to the container's you will need to add a volume argument to the creation command as follow:
