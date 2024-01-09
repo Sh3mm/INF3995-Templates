@@ -18,15 +18,17 @@ docker build -t "rosignbase" ./
 
 Finally make the new image using rocker:
 ```bash
-rocker --x11 --network=host --device=/dev/dri --mode=dry-run --image-name=rosign rosignbase
+rocker --x11 --network=host --device=/dev/dri --image-name=rosign rosignbase
 ```
 
-After running the previous command, you should see the command you will need to
-run each time you want to use the container. It should look like the following: 
-```shell
-# DO NOT RUN THIS COMMAND, USE YOUR OWN
-docker run --rm -it  -e DISPLAY -e TERM   -e QT_X11_NO_MITSHM=1   -e XAUTHORITY=/tmp/.dockerzqv0y_01.xauth -v /tmp/.dockerzqv0y_01.xauth:/tmp/.dockerzqv0y_01.xauth   -v /tmp/.X11-unix:/tmp/.X11-unix   -v /etc/localtime:/etc/localtime:ro  rosignbase
+## Linking folders:
+to link a folder from your file manager to the container's you will need to add a volume argument (`-v path/to/foler:where/it/goes/in/container`) to the creation command as follow:
+
+```bash
+rocker --x11 --network=host --volume path/to/foler:where/it/goes/in/container --device=/dev/dri --image-name=rosign rosignbase
+docker run --rm -p 5901:5901 -v path/to/foler:where/it/goes/in/container -it rosign bash -c "TVNC_WM=mate /opt/TurboVNC/bin/vncserver; /bin/bash" 
 ```
+
 
 ### Warning:
 You may need to check the main [rocker](https://github.com/osrf/rocker) page to check how to use your GPU (such as Nvidia GPUs)
