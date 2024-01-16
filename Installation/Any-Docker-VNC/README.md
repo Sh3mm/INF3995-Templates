@@ -11,17 +11,7 @@ First, build the Dockerfile into a usable image:
 docker build -t rosign .
 ```
 
-Then, create the docker container:
-```bash
-docker create --name="teamX-ros-ign" -p 5901:5901 -it rosign /bin/bash
-```
-
-Once this is done you can use the following command to start the docker container:
-```bash
-docker start --attach -i teamX-ros-ign
-```
-
-After getting in the container, run the following command to start the server:
+After creating the image, run the following command to start the server:
 ```bash
 docker run --rm -p 5901:5901 -it teamX-ros-ign bash -c "TVNC_WM=xfce /opt/TurboVNC/bin/vncserver -securitytypes TLSNone,X509None,None; /bin/bash" 
 ```
