@@ -18,14 +18,7 @@ docker build -t "rosignbase" ./
 
 Finally make the new image using rocker:
 ```bash
-rocker --x11 --network=host --device=/dev/dri --mode=dry-run --image-name=rosign rosignbase
-```
-
-After running the previous command, you should see the command you will need to
-run each time you want to use the container. It should look like the following: 
-```shell
-# DO NOT RUN THIS COMMAND, USE YOUR OWN
-docker run --rm -it  -e DISPLAY -e TERM   -e QT_X11_NO_MITSHM=1   -e XAUTHORITY=/tmp/.dockerzqv0y_01.xauth -v /tmp/.dockerzqv0y_01.xauth:/tmp/.dockerzqv0y_01.xauth   -v /tmp/.X11-unix:/tmp/.X11-unix   -v /etc/localtime:/etc/localtime:ro  rosignbase
+rocker --x11 --network=host --device=/dev/dri --image-name=rosign rosignbase
 ```
 
 ### Warning:
