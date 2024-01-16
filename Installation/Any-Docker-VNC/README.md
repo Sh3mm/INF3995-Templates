@@ -8,7 +8,7 @@ Since You will be installing a lot of packages and libraries on your system, it 
 
 First, build the Dockerfile into a usable image:
 ```bash
-docker build -t rosign .
+docker build -t teamX-ros-ign .
 ```
 
 After creating the image, run the following command to start the server:
