@@ -17,7 +17,7 @@ A template project integrating ROS 2 and Gazebo simulator.
 
     ```bash
     cd project_ws
-    sudo rosdep init
+    rosdep init
     rosdep update
     rosdep install --from-paths src --ignore-src -r -i -y --rosdistro <ROS_DISTRO>
     ```
