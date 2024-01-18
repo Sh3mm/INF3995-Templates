@@ -16,7 +16,7 @@ A template project integrating ROS 2 and Gazebo simulator.
 1. Install dependencies
 
     ```bash
-    cd template_ws
+    cd project_ws
     sudo rosdep init
     rosdep update
     rosdep install --from-paths src --ignore-src -r -i -y --rosdistro <ROS_DISTRO>
@@ -31,7 +31,7 @@ A template project integrating ROS 2 and Gazebo simulator.
 1. Source the workspace
 
     ```bash
-    . template_ws/install/setup.sh
+    . project_ws/install/setup.sh
     ```
 
 1. Launch the simulation
