@@ -31,7 +31,7 @@ A template project integrating ROS 2 and Gazebo simulator.
 1. Source the workspace
 
     ```bash
-    . install/setup.sh
+    source install/setup.sh
     ```
 
 1. Launch the simulation
