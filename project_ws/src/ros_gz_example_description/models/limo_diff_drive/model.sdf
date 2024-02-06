@@ -401,7 +401,7 @@
             <min_angular_velocity>-1</min_angular_velocity-->
         </plugin>
         <frame name='depth_camera_to_camera_joint' attached_to='depth_camera_link'>
-            <pose>0 0 0 -1.57079 -0 -1.57079</pose>
+            <pose>0 0 0 0 -0 0</pose>
         </frame>
         <frame name='depth_link' attached_to='depth_camera_to_camera_joint'/>
         <frame name='depth_camera_joint' attached_to='base_link'>
