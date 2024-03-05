@@ -55,7 +55,7 @@
       </link>
     </model>
 
-    <model name="diff_drive">
+    <model name="limo">
       <self_collide>true</self_collide>
       <pose>0 0 0.35 0 0 0</pose>
       <include merge="true">

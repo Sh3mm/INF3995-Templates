@@ -26,6 +26,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 apt update; apt install ros-humble-desktop -y
 
+pip3 install rosdep
+
 echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 echo "export GZ_VERSION=fortress" >> /root/.bashrc
 
