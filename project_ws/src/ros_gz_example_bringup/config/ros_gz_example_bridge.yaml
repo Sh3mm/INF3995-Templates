@@ -19,6 +19,11 @@
   ros_type_name: "sensor_msgs/msg/LaserScan"
   gz_type_name: "gz.msgs.LaserScan"
   direction: GZ_TO_ROS
+- ros_topic_name: "limo/imu"
+  gz_topic_name: "limo/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS
 - ros_topic_name: "limo/depth/image"
   gz_topic_name: "/limo/depth/image_raw"
   ros_type_name: "sensor_msgs/msg/Image"
