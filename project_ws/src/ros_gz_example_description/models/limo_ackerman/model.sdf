@@ -463,7 +463,7 @@
         </link>
         <plugin filename="libignition-gazebo-ackermann-steering-system" name="ignition::gazebo::systems::AckermannSteering">
             <topic>limo/cmd_vel</topic>
-            <odom_topic>limo/odom</odom_topic>
+            <!--odom_topic>limo/odom</odom_topic-->
             <left_joint>front_left_wheel</left_joint>
             <left_joint>rear_left_wheel</left_joint>
             <right_joint>front_right_wheel</right_joint>
@@ -507,7 +507,8 @@
         
         <plugin filename="ignition-gazebo-odometry-publisher-system" name="ignition::gazebo::systems::OdometryPublisher">
             <odom_frame>limo/odom</odom_frame>
-            <robot_base_frame>limo</robot_base_frame>
+            <robot_base_frame>limo/base_footprint</robot_base_frame>
+            <odom_topic>limo/odom</odom_topic>
         </plugin>
     </model>
 </sdf>
