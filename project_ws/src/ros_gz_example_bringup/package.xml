@@ -13,6 +13,9 @@
   <depend>sdformat_urdf</depend>
   <depend>joint_state_publisher_gui</depend>
 
+  <depend>cartographer_ros</depend>
+  <depend>cartographer_ros_msgs</depend>
+
   <depend>ros_gz_example_description</depend>
   <depend>ros_gz_example_gazebo</depend>
 

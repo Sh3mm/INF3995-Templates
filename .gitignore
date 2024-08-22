@@ -36,6 +36,6 @@ project_ws/build/
 project_ws/install/
 project_ws/log/
 
-
-# My cartographer config, MINE!!! NO GIVE!!!
-project_ws/src/ros_gz_example_bringup/config/cartographer_2d.lua
+# Editors
+**/.idea
+**/.vscode

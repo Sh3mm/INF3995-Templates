@@ -128,7 +128,7 @@
             <sensor name='imu_sensor' type='imu'>
                 <topic>/limo/imu</topic>
                 <always_on>true</always_on>
-                <update_rate>100</update_rate>
+                <update_rate>8</update_rate>
                 <visualize>true</visualize>
                 <pose relative_to="imu_link">0 0 0 0 0 0</pose>
             </sensor>
@@ -429,8 +429,9 @@
         
         <plugin filename="ignition-gazebo-odometry-publisher-system" name="ignition::gazebo::systems::OdometryPublisher">
             <odom_frame>limo/odom</odom_frame>
-            <robot_base_frame>limo/base_footprint</robot_base_frame>
+            <robot_base_frame>limo</robot_base_frame>
             <odom_topic>limo/odom</odom_topic>
+            <odom_publish_frequency>8</odom_publish_frequency>
         </plugin>
     </model>
 </sdf>
