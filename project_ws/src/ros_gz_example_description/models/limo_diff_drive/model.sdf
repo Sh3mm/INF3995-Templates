@@ -56,6 +56,39 @@
                 </geometry>
             </collision>
             <visual name='base_footprint_fixed_joint_lump__base_link_visual'>
+                <pose>0 0 0.15 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.13 0.12 0.1</size>
+                    </box>
+                </geometry>
+            </visual>
+            <visual name='base_footprint_fixed_joint_lump__depth_camera_visual_1'>
+                <pose>0.08400000000000001 0 0.18 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.02 0.06 0.015</size>
+                    </box>
+                </geometry>
+            </visual>
+            <visual name='base_footprint_fixed_joint_lump__imu_visual_2'>
+                <pose>0 0 0.04999999999999999 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.001 0.001 0.001</size>
+                    </box>
+                </geometry>
+            </visual>
+            <visual name='base_footprint_fixed_joint_lump__laser_visual_3'>
+                <pose>0.103 0 0.116 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <length>0.016</length>
+                        <radius>0.032000000000000001</radius>
+                    </cylinder>
+                </geometry>
+            </visual>
+            <!--visual name='base_footprint_fixed_joint_lump__base_link_visual'>
                 <pose>0 0 0 0 0 1.57</pose>
                 <geometry>
                     <mesh>
@@ -100,7 +133,7 @@
                     <diffuse>0 0 0 1</diffuse>
                     <ambient>0 0 0 1</ambient>
                 </material>
-            </visual>
+            </visual-->
             <sensor name='sensor_camera' type='depth_camera'>
                 <topic>/limo/depth/image_raw</topic>
                 <always_on>true</always_on>
